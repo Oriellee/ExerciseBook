@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>筛选空气质量</title>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			margin: 20px auto;
+			background-color:#FFF0F5; 
+		}
+		.box button{
+			margin-left: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<h1>污染城市列表</h1>
+		<ul>
+			<li>西安:100</li>
+			<li>北京:90</li>
+			<li>成都:10</li>
+			<li>上海:60</li>
+			<li>武汉:110</li>
+			<li>深圳:150</li>
+			<li>福州:40</li>
+		</ul>
+		<button>重度污染城市</button>
+	</div>
+	<script type="text/javascript">
+		var ul1 = document.querySelector("ul");
+		var li1 = document.querySelectorAll("li");
+		var btn = document.querySelector("button");
+		function bian(){
+			ul1.innerHTML = "";
+			for(var i=0;i<li1.length;i++){
+				var a = li1[i].innerHTML;
+				var fen = a.split(":");
+				var last = fen[1];
+				var name = fen[0];
+			
+			if(last>80){
+				var listItem = document.createElement("li");
+				listItem.textContent = name+last;
+				ul1.appendChild(listItem);
+					}
+				}
+		}
+		btn.addEventListener("click",bian);
+	</script>
+</body>
+</html>
