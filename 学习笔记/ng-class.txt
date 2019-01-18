@@ -1,0 +1,2 @@
+ng-class="{'enable' : x.status && x.type, 'disable' : !x.status && x.type, 'unlock' : !x.type}"
+ng-class="{true : 'checker disabled',false : 'checker' }[selectAllButton]"

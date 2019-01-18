@@ -1,0 +1,1 @@
+width : calc(~"100% - @{left_menu_wid}");

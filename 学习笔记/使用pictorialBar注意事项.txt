@@ -1,0 +1,3 @@
+网址：http://echarts.baidu.com/blog/2017/01/13/new-release.html
+
+需要引入echart3.4以上的版本。

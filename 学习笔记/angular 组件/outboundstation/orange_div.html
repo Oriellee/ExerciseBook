@@ -1,0 +1,27 @@
+<style type="text/css">
+
+.orange_box .orange {
+    background-color: #de6e18;
+    display: inline-block;
+    margin-left: 3px;
+    width: 6px;
+    height: 12px;
+    transform: rotate(30deg);
+    border: 1px solid #de6e18;
+}
+
+.orange_box .noorange {
+    background-color: #222;
+    display: inline-block;
+    margin-left: 3px;
+    width: 6px;
+    height: 12px;
+    transform: rotate(30deg);
+    border: 1px solid #de6e18;
+}
+</style>
+<div class="orange_box" ng-controller="orangeboxCtr">
+    <span ng-class="{true : 'orange',false : 'noorange' }[is_orange == '1']"></span>
+    <span ng-class="{true : 'orange',false : 'noorange' }[is_orange == '2']"></span>
+    <span ng-class="{true : 'orange',false : 'noorange' }[is_orange == '3']"></span>
+</div>

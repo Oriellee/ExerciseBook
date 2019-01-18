@@ -1,0 +1,4 @@
+ssh-keygen -t rsa  //生成公钥 私钥
+复制公钥/私钥到相关git主页。
+添加主页的地址：gitlab.local 到 hosts文件中：地址：C:\Windows\System32\drivers\etc   eg：192.168.1.100 gitlab.local
+复制项目地址直接clone。

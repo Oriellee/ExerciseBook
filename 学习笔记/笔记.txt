@@ -1,0 +1,4 @@
+1.array.concat();当不传递任何参数时，这个是该数组的复制，改变新数组不会影响到旧数组。
+2.两个div并排使用inline-block时，需要设置vertical-align: top;
+3.for(var i=0,len = data.length;i<len;i++){}使用for循环时尽量定义len，避免多次访问data，特别是当data是dom的时候。
+

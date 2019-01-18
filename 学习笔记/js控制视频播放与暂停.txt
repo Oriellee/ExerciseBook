@@ -1,0 +1,18 @@
+var audio = document.getElementById("bgMusic");
+ 
+//播放(继续播放)
+audio.play();
+ 
+//暂停
+audio.pause();
+ 
+//停止
+audio.pause();
+audio.currentTime = 0;
+ 
+//重新播放
+audio.currentTime = 0;
+audio.play();
+
+
+网址：http://www.hangge.com/blog/cache/detail_897.html

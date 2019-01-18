@@ -1,0 +1,93 @@
+ // 点击管控圈显示管控圈轮廓。
+            // $scope.ringchecked = function(item, index) {
+            //     if (item.checked) {
+            //         $scope.mapPolygon[index].show();
+            //         var ele_msg = '查看了' + item.name + '的重点人员管控轮廓';
+            //         ScLogger.writelog(2, 1, "实时重点人员管控", "实时重点人员管控", ele_msg, "");
+            //     } else {
+            //         $scope.mapPolygon[index].hide();
+            //     }
+            // };
+
+
+ // 获取所有的管控圈数据。
+            // $scope.alarmcircle_show = function() {
+            //     $http.get('/service/manmonitor/viewcringpolygons').then(function(response) {
+            //         var rtdatascring = [];
+            //         var rtdatascringgroup = [];
+            //         $scope.rtdatasareachecks = [];
+            //         $scope.mapPolygon = [];
+            //         //console.log('cring',response.data);
+            //         for (var i = 0; i < response.data.length; i++) {
+            //             var id = response.data[i]["id"];
+            //             var name = response.data[i]["name"];
+            //             if (rtdatascring.indexOf(name) == -1) {
+            //                 rtdatascring.push(name);
+            //                 color = $scope.colors[i % $scope.colors.length];
+            //                 rtdatascringgroup.push({ "id": id, "name": name, "color": color, "points": response.data[i]["poly"] })
+            //             } else {
+            //                 for (var j in rtdatascringgroup) {
+            //                     if (rtdatascringgroup[j]["name"] == name) {
+            //                         rtdatascringgroup[j]["points"].push(response.data[i]["poly"]);
+            //                         break;
+            //                     }
+            //                 }
+            //             }
+            //         }
+            //         for (var i in rtdatascring) {
+            //             $scope.rtdatasareachecks.push({ "name": rtdatascring[i], "checkstats": false });
+            //         }
+
+            //         $scope.alarmmap_refresharea(rtdatascringgroup);
+            //         $scope.showctr.iscringdataflag = true;
+            //         rtdatascring = [];
+            //         rtdatascringgroup = [];
+            //     }, function(response) {});
+            // };
+            // 画出管控圈。
+            // $scope.alarmmap_refresharea = function refreshdataarea(datas) {
+            //     $scope.mapPolygon = [];
+            //     var map = window.map;
+            //     if (document.createElement('canvas').getContext) { // 判断当前浏览器是否支持绘制海量点
+            //         for (var j = 0; j < datas.length; j++) {
+            //             var color = datas[j]['color'];
+            //             var name = datas[j]['name'];
+            //             var points = []; // 添加轮廓线
+            //             for (var i = 0; i < datas[j]['points'].length; i++) {
+            //                 var p = new BMap.Point(datas[j]['points'][i]["lng"], datas[j]['points'][i]["lat"]);
+            //                 p.data = name;
+            //                 points.push(p);
+            //             }
+            //             var options = {
+            //                 strokeColor: color,
+            //                 strokeWeight: 1,
+            //                 strokeOpacity: 0.9,
+            //                 fillColor: 'green',
+            //                 fillOpacity: 0.1
+            //             };
+            //             var ply = new BMap.Polygon(points, options); // 初始化PointCollection
+            //             map.addOverlay(ply); // 添加Overlay
+            //             $scope.mapPolygon.push(ply);
+            //             ply.hide();
+            //         }
+            //     } else {
+            //         alert('请在chrome、safari、IE8+以上浏览器查看本示例');
+            //     }
+            // };
+
+
+// 在地图显示选中的管控圈。
+            // $scope.alarmmap_showitemcricle = function(row) {
+            //     var circlename = row.area;
+            //     for (var i in $scope.rtdatasareachecks) {
+            //         if (circlename == $scope.rtdatasareachecks[i]["name"]) {
+            //             $scope.rtdatasareachecks[i]["checkstats"] = true;
+            //             $scope.mapPolygon[i].show();
+            //             var ele_msg = '查看了' + circlename + '的重点人员管控轮廓';
+            //             ScLogger.writelog(2, 1, "实时重点人员管控", "实时重点人员管控", ele_msg, "");
+            //             break;
+            //         }
+            //     }
+            // };
+
+

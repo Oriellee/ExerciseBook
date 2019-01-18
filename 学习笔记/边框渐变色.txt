@@ -1,0 +1,5 @@
+.border-block {
+  border: 10px solid transparent;
+  border-image: linear-gradient(to top, #F80, #2ED);
+  border-image-slice: 10;
+}

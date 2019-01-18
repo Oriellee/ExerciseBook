@@ -1,0 +1,12 @@
+git clone µØÖ·
+
+git pull
+
+git push
+
+git status
+
+git add µØÖ·
+
+git commit -m "aa" -a
+

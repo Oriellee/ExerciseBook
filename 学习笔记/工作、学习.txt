@@ -1,0 +1,26 @@
+学习：
+	angular模态框的应用。
+	angular ng-table的应用。
+
+正则表达式：var namereg = /^[a-zA-Z0-9_-]{4,16}$/;
+	!namereg.test($scope.new_row.name)
+		
+为什么使用这种循环而不是用两个for循环直接相等呢，因为直接使用后者的话，如果小数组中的第一个是个大数组中的第三个相等。与大数组中的第一个不相等，那么就会被推进大数组中。这种判断的是大数中中的第一位和小数组中的每一位时候相等，而不是在小数组中是否存在大数组。
+循环。
+for (i in $scope.persondata) {
+                    if ($scope.newdata.length != 0) {
+                        var flag = false;
+                        for (j in $scope.newdata) {
+                            if ($scope.newdata[j].identity_number == $scope.persondata[i].identity_number) {
+                                flag = true;
+                                break;
+                            }
+                        }
+                        if (flag == false) {
+                            $scope.newdata.push($scope.persondata[i]);
+                        }
+                    } else {
+                        $scope.newdata.push($scope.persondata[i]);
+                    }
+
+                }

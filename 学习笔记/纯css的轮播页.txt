@@ -1,0 +1,45 @@
+.father_box {
+    width: 1536px;
+    border: 1px solid red;
+    transition: all 500ms ease-in-out 0s;
+    /*-webkit-animation: change 60s linear infinite; //10s是整个动画的秒数 infinite是永久循环*/
+}
+
+
+
+
+/*@-webkit-keyframes change{
+    0%{
+        margin-left:0;
+    }
+    14%{
+        margin-left:0;
+    }
+    16.5%{
+        margin-left:-768px;
+    }
+
+    33%{
+        margin-left:-768px;
+    }
+    47%{
+        margin-left:-768px;
+    }
+    49.5%{
+        margin-left:-1536px;
+    }
+    66%{
+        margin-left:-1536px;
+    }
+    82.4%{
+        margin-left:-1536px;
+    }
+    
+    82.5%{
+        margin-left:0px;
+    }
+    100%{
+        margin-left:0px;
+    }
+
+}*/

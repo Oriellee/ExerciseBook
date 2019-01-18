@@ -1,0 +1,45 @@
+            <form class="form-horizontal" role="form">
+                <div class="col-sm-12 form-group">
+                    <label class="col-sm-2 control-label">步骤名称：</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control"
+                               placeholder="请输入名称">
+                    </div>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label class="col-sm-4 control-label">步骤开始时间：</label>
+                    <div class="col-sm-8">
+                        <input type="datetime-local" class="form-control"
+                        >
+                    </div>
+                </div>
+                <div class="col-sm-6 form-group">
+                    <label class="col-sm-4 control-label">用户数据集：</label>
+                    <div class="col-sm-8">
+                        <input type="datetime-local" class="form-control"
+                        >
+                    </div>
+                </div>
+                <div class="col-sm-12 form-group">
+                    <label class="col-sm-2 control-label">步骤要求：</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </form>
+
+样式：
+>form{
+    overflow: auto;
+    width: 90%;
+    margin: 0 8% 0 2%;
+    >.form-group{
+      margin:10px 0;
+      padding-left: 0;
+      padding-right: 0;
+      >div,>label{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }

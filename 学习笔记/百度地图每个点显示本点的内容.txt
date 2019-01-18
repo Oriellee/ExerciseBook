@@ -1,0 +1,17 @@
+mkr.data = point_data;
+                        mkr.addEventListener('click', function(e) {
+                            var open_point = new BMap.Point(e.point.lng, e.point.lat);
+                            var opts = {
+                                width: 50, // 信息窗口宽度
+                                height: 50, // 信息窗口高度
+                                title: "信息", // 信息窗口标题
+                                enableMessage: false //设置允许信息窗发送短息
+                            };
+                            var sContent =
+                                "<div style='overflow:auto;height:50px;'>名称：" + e.currentTarget.data.name + "</br>详情：" + e.currentTarget.data.introduction + "</div>";
+                            var infowindow = new BMap.InfoWindow(sContent, opts);
+                            map.openInfoWindow(infowindow, open_point);
+                            $scope.checked_office_id = e.currentTarget.data["id"];
+                            $scope.change_office($scope.checked_office_id);
+                        });
+                        map.addOverlay(mkr);

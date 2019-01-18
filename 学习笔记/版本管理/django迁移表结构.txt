@@ -1,0 +1,6 @@
+1.清空迁移目标的表结构。
+2.如果数据库为oracle的话，分清楚service_name和sid_name。
+3.使用：python manage.py makemigrations 语句，构建每个服务层文件的表结构语句。在每个接口文件下的misrations。如果有之前的结构语句，先删除。
+4.使用：python manage.py migrate  语句，运行结构语句，生成表。
+5.oracle插入字符最大长度2000。
+

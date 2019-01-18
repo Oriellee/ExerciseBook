@@ -1,0 +1,1 @@
+select DISTINCT * from movie_details a where 10>= (select count(*) from (select DISTINCT * from movie_details) b where a.type = b.type AND a.releaseTime <= b.releaseTime) ORDER BY a.type,a.releaseTime DESC

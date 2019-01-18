@@ -1,0 +1,35 @@
+<div class="form-group">
+    <label class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+      <p class="form-control-static">email@example.com</p>
+    </div>
+  </div>
+
+
+.father_toast {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 1px;
+}
+
+.toast {
+    position: relative;
+    top: -50%;
+    left: -50%;
+    overflow: auto;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #72afd2;
+    border-color: #d6e9c6;
+}
+
+<div class="father_toast" ng-show="toast.show">
+        <div class="toast">
+            <span>{{toast.name}}</span>
+        </div>
+    </div>

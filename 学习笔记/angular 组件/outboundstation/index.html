@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="/static/app/outboundstation/style.css">
+<div class="container-fluid father_box" ng-controller="outboundstationCtr">
+    <div id='map' class="mapcontent">
+        <video id="video"  muted >
+            <source src="/static/img/outboundstation/map.mp4" type="video/mp4" />
+        </video>
+        <div ng-repeat="row in city_list track by $index" ng-show="city_index == '{{row}}'&&city_tip_show==true" class="city_style {{row}}">
+            <span>{{station_name}}</span>
+           <span>进站人数 : {{statistics.station_in_cnt | currency:'':0}}</span>
+            <span>出站人数 : {{statistics.station_out_cnt | currency:'':0}}</span>
+        </div>
+    </div>
+    <div class="marquee_div" ng-click="get_data(1)">
+        <div class="page_title">
+        </div>
+    </div>
+    <div class="big_box detail_box">
+        <div>
+            <div class="labeltext">
+                <lable>
+                    <orangebox></orangebox>  
+                    <span>数据统计</span>
+                </lable>
+                <div class="bgk_border">
+                    <span class="orange_line"></span>
+                    <span class="grey_line"></span>
+                </div>
+            </div>
+            <div class="borderdiv">
+                <div class="detail_row">
+                    <div>
+                        当前入站
+                    </div>
+                    <span>{{statistics.station_in_cnt | currency:'':0}}</span>
+                    <img src="/static/img/outboundstation/row_bgk.png">
+                </div>
+                <div class="detail_row">
+                    <div>当前出站</div>
+                    <span>{{statistics.station_out_cnt | currency:'':0}}</span>
+                    <img src="/static/img/outboundstation/row_bgk.png">
+                </div>
+                <div class="detail_row">
+                    <div>总人数</div>
+                    <span>{{statistics.station_total_cnt | currency:'':0}}</span>
+                    <img src="/static/img/outboundstation/row_bgk.png">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="labeltext">
+                <lable>
+                    <orangebox></orangebox>  
+                    <span>进出站趋势</span>
+                </lable>
+                <div class="bgk_border">
+                    <span class="orange_line"></span>
+                    <span class="grey_line"></span>
+                </div>
+            </div>
+            <div class="borderdiv">
+                <div class="echart_body" id='out_in_div'></div>
+            </div>
+        </div>
+    </div>
+    <div class="big_box echart_box">
+        <div>
+            <div class="labeltext">
+                <lable>
+                    <orangebox></orangebox>  
+                    <span>年龄分布</span>
+                </lable>
+                <div class="bgk_border">
+                    <span class="orange_line"></span>
+                    <span class="grey_line"></span>
+                </div>
+            </div>
+            <div class="borderdiv">
+                <div class="echart_body" id='age_div'></div>
+            </div>
+        </div>
+        <div>
+            <div class="labeltext">
+                <lable>
+                    <orangebox></orangebox>  
+                    <span>性别比例</span>
+                </lable>
+                <div class="bgk_border">
+                    <span class="orange_line"></span>
+                    <span class="grey_line"></span>
+                </div>
+            </div>
+            <div class="borderdiv">
+                <div class="echart_body" id='sex_div'></div>
+            </div>
+        </div>
+    </div>
+</div>

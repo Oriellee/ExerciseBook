@@ -1,0 +1,11 @@
+angular下的cooikes
+
+	module中注入ngCookies，controller中引入$cookies，
+	存：$cookies.put('aaaaa', "hahahahahhahahhah");
+	取：var aaa = $cookies.get('aaaaa');
+	
+angular下的localStorage
+
+	存：localStorage.setItem('addData', JSON.stringify($scope.addData));
+	取：angular.fromJson(localStorage.getItem("addData"));
+	清空：localStorage.removeItem('addData');

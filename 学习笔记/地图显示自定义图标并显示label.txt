@@ -1,0 +1,52 @@
+function human_map_point(data) {
+                var map = window.map.human_map;
+                if (document.createElement('canvas').getContext) {
+                    for (var i = 0; i < data.length; i++) {
+                        point_data = data[i];
+                        var imgpath = "/static/img/img/sm_logo.jpg";
+                        var icon = new BMap.Icon(imgpath, new BMap.Size(30, 30), {
+                            anchor: new BMap.Size(30, 30)
+                        });
+                        var mkr = new BMap.Marker(new BMap.Point(point_data["lng"], point_data["lat"]), {
+                            icon: icon
+                        });
+
+                        var label = new BMap.Label(point_data["name"], {
+                            offset: new BMap.Size(-40, -30)
+                        });
+                        label.setStyle({
+                            width: "120px",
+                            color: '#ffffff',
+                            background: '#55709f',
+                            border: '1px solid "#ff8355"',
+                            borderRadius: "5px",
+                            textAlign: "center",
+                            height: "26px",
+                            lineHeight: "26px"
+                        });
+                        mkr.setLabel(label);
+                        mkr.addEventListener('click', function(e) {
+                            var open_point = new BMap.Point(e.point.lng, e.point.lat);
+                            var opts = {
+                                width: 50, // 信息窗口宽度
+                                height: 50, // 信息窗口高度
+                                title: "信息", // 信息窗口标题
+                                enableMessage: false //设置允许信息窗发送短息
+                            };
+                            var sContent =
+                                "<div style='overflow:auto;height:50px;'>名称：" + point_data.name + "</br>地址：" + point_data.introduction + "</div>";
+                            var infowindow = new BMap.InfoWindow(sContent, opts);
+                            map.openInfoWindow(infowindow, open_point);
+                            $scope.checked_office_id = point_data["id"];
+                            $scope.change_office($scope.checked_office_id);
+                        });
+                        map.addOverlay(mkr);
+                    }
+                } else {
+                    alert('请在chrome、safari、IE8+以上浏览器查看本示例');
+                }
+            }
+			
+			
+			
+			

@@ -1,0 +1,13 @@
+	var allNode=0;
+	var nodes=myChart._chartsViews[0]._data._graphicEls;//获取当前tree节点有多少个。
+	for(var i=0,count =nodes.length;i<count;i++){
+		var node=nodes[i];
+		if(node===undefined)//判断该节点是不是为空。
+			continue;
+		allNode++;
+	}
+	$scope.tree_style.height = allNode*50+"px";//每个节点的高度*展开状态的节点的个数。
+	myChart.resize({
+		width: "690px",
+		height: $scope.tree_style.height
+	});//动态设置echart大小。

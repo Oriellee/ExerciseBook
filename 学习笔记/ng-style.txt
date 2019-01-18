@@ -1,0 +1,7 @@
+html：
+	ng-style="tree_style"
+js：
+	$scope.tree_style = {
+        width:"",
+        height:""
+    };

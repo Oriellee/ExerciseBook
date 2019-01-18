@@ -1,0 +1,19 @@
+            var renames = [];
+
+            for (var temp in data.names) {
+                var rename = data.names[temp];
+                if (data.names[temp].length > 7) {
+                    var re = '';
+                    var length = data.names[temp].length;
+                    for (var i = 0, j = 1; i < length; i++, j++) {
+                        if (j && j % 7 == 0) {
+                            re += rename[i]+'\n';
+                        } else {
+                            re += rename[i];
+                        }
+                    }
+                }else{
+                    re = data.names[temp];
+                }
+                renames.push(re);
+            }

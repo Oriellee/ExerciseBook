@@ -1,0 +1,1 @@
+map.setViewport(pointsView); //将所有的点放置在最佳视野内

@@ -1,0 +1,25 @@
+<style type="text/css">
+
+.marquee_text {
+    width: 100%;
+    font-size: 22px;
+    color:#ffffff;
+}
+.marquee_text>img {
+    width: 23px;
+    height: 8px;
+}
+
+.marquee_text>span {
+    font-size: 28px;
+    color: #00eaff;
+}
+</style>
+<marquee ng-click="stream_general_show()" direction=left class="marquee_text" ng-controller="marqueenCtr">
+    <img src="/static/img/outboundstation/orange_line.png"> 实时在馆人数:
+    <span>{{venuecenter.currentpeople | currency:'':0}}</span>
+    <img src="/static/img/outboundstation/orange_line.png"> 当天累计人数:
+    <span>{{venuecenter.daypeople | currency:'':0}}</span>
+    <!-- <img src="/static/img/outboundstation/orange_line.png"> 展会累计人数:
+    <span>{{venuecenter.totalpeople | currency:'':0}}</span> -->
+</marquee>
